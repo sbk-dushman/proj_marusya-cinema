@@ -24,5 +24,6 @@ a,
   }
 
   #app {
+    font-family: var(--font-family);
   }
 }

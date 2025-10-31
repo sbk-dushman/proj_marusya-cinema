@@ -17,4 +17,8 @@
   </header>
 </template>
 
-<style></style>
+<style>
+.header__nav {
+  font-family: var(--second-family);
+}
+</style>
