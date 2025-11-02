@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header__logo">
-      <svg class="icon">
+      <svg class="">
         <use xlink:href="@/assets/sprite.svg#logo_w"></use>
       </svg>
     </div>
