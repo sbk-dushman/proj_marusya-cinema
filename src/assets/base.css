@@ -40,6 +40,8 @@
   --base-yellow: #a59400;
   --base-green: #308e21;
   --base-grey: #777777;
+  --dark-grey: #393b3c;
+  --soft-grey: #ffffff80;
   --base-red: #c82020;
   --base-pink-under-line: #dc5dfc;
   --base-focuse-color: #b4a9ff;
@@ -83,8 +85,19 @@
   font-weight: normal;
   padding: 0;
 }
+a {
+  text-decoration: none;
+}
 ul {
   list-style: none;
+}
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 body {
   min-height: 100vh;

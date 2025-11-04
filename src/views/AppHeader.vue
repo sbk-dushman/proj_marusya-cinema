@@ -5,14 +5,19 @@
         <use xlink:href="@/assets/sprite.svg#logo_w"></use>
       </svg>
       <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Жанры</a></li>
+        <ul class="header-nav__list">
+          <li class="nav-list__item"><a class="nav-list__link --current" href="#">Главная</a></li>
+          <li class="nav-list__item"><a class="nav-list__link" href="#">Жанры</a></li>
         </ul>
       </nav>
+      <label class="header-search__label" for="header__search">
+        <svg class="header-search__icon">
+          <use xlink:href="@/assets/sprite.svg#search-icon"></use>
+        </svg>
+        <input class="header__search" type="text" id="header__search" placeholder="поиск" />
+      </label>
 
-      <input class="header__search" type="text" placeholder="поиск" />
-      <button class="header__profile">Войти</button>
+      <button class="header__profile nav-list__link">Войти</button>
     </div>
   </header>
 </template>
@@ -31,7 +36,42 @@
   justify-content: space-between;
   align-items: center;
 }
-.header__nav {
-  font-family: var(--second-family);
+.header-nav__list {
+  display: flex;
+  gap: 40px;
+  color: var(--base-white);
+}
+.nav-list__link {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--base-white);
+}
+.--current {
+  border-bottom: 1.5px solid var(--base-pink-under-line);
+}
+.header__search {
+  border-radius: 8px;
+  padding: 16px;
+  width: 655px;
+  height: 48px;
+  text-transform: uppercase;
+  padding: 12px 52px;
+  background-color: var(--dark-grey);
+  color: var(--soft-grey);
+  outline: none;
+}
+.header-search__label {
+  position: relative;
+}
+.header-search__icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 16px;
+  top: 12px;
+
+  fill: var(--soft-grey);
 }
 </style>
