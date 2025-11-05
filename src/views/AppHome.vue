@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import AppHero from './AppHero.vue'
 </script>
 
 <template>
+  <AppHero />
   <section class="rating-section">
     <h2>Топ 10 фильмов</h2>
     <ul class="rating-list">

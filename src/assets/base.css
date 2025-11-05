@@ -101,7 +101,7 @@ button {
 }
 body {
   min-height: 100vh;
-  color: var(--color-text);
+  color: var(--base-white);
   background-color: rgb(106, 93, 194);
   background:
     linear-gradient(180deg, #000 0%, rgba(39, 36, 36, 0.7) 100%),
