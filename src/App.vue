@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView } from 'vue-router'
 import AppHeader from './views/AppHeader.vue'
 import AppFooter from './views/AppFooter.vue'
 </script>

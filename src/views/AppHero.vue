@@ -13,12 +13,22 @@
           Увлекательные приключения самого известного сыщика всех времен
         </p>
         <div class="hero-card__buttn-group">
-          <button class="button">Трейлер</button>
-          <button class="button">О фильме</button>
-          <button class="button"></button>
+          <button class="btn-primary">Трейлер</button>
+          <button class="btn-primary">О фильме</button>
+          <button class="circular-btn">
+            <svg class="">
+              <use xlink:href="@/assets/sprite.svg#heart-icon"></use>
+            </svg>
+          </button>
+
+          <button class="circular-btn">
+            <svg class="">
+              <use xlink:href="@/assets/sprite.svg#reload-icon"></use>
+            </svg>
+          </button>
         </div>
       </div>
-      <img class="hero-image" src="" alt="film-image" />
+      <img class="hero-image" src="@/assets/caver.jpg" alt="film-image" />
     </div>
   </section>
 </template>
@@ -36,15 +46,16 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 133%;
+  color: var(--transperant-grey);
 }
 .hero-image {
   border-radius: 16px;
   width: 680px;
   height: 552px;
-  background-color: blue;
+  background-size: cover;
 }
 .hero-card {
-  background-color: red;
+  /* background-color: red; */
   flex-direction: column;
   max-width: 600px;
   padding: 16px;
@@ -55,5 +66,26 @@
 }
 .hero-card__buttn-group {
   padding-top: 60px;
+  display: flex;
+  gap: 16px;
+}
+.btn-primary {
+  border: 1px solid var(--dark-border);
+  border-radius: 28px;
+  padding: 16px 48px;
+  width: 183px;
+  height: 56px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  background: var(--dark-grey);
+}
+.circular-btn {
+  border: 1px solid var(--dark-border);
+  border-radius: 28px;
+  width: 68px;
+  height: 56px;
+  background: var(--dark-grey);
 }
 </style>

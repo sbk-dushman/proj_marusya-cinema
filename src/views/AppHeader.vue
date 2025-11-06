@@ -12,7 +12,7 @@
       </nav>
       <label class="header-search__label" for="header__search">
         <svg class="header-search__icon">
-          <use xlink:href="@/assets/sprite.svg#search-icon"></use>
+          <use xlink:href="@/assets/sprite.svg#heart-icon"></use>
         </svg>
         <input class="header__search" type="text" id="header__search" placeholder="поиск" />
       </label>

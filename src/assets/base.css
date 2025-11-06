@@ -41,11 +41,13 @@
   --base-green: #308e21;
   --base-grey: #777777;
   --dark-grey: #393b3c;
+  --dark-border: #00000066;
   --soft-grey: #ffffff80;
   --base-red: #c82020;
   --base-pink-under-line: #dc5dfc;
   --base-focuse-color: #b4a9ff;
   --base-blue: #67a5eb;
+  --transperant-grey: #ffffffb3;
 }
 
 /* semantic color variables for this project */
@@ -98,6 +100,11 @@ button {
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+}
+svg {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
 }
 body {
   min-height: 100vh;
