@@ -1,0 +1,33 @@
+<template>
+  <AppHero />
+  <section class="film-section">
+    <h2 class="section-title">О фильме</h2>
+    <ul class="film-descrption">
+      <li class="film-descrption__item">
+        <span class="film-descrption___property">Язык оригинала</span>
+        <span class="film-descrption___value">Русский</span>
+      </li>
+      <li class="film-descrption__item">
+        <span class="film-descrption___property">Язык оригинала</span>
+        <span class="film-descrption___value">Русский</span>
+      </li>
+      <li class="film-descrption__item">
+        <span class="film-descrption___property">Язык оригинала</span>
+        <span class="film-descrption___value">Русский</span>
+      </li>
+      <li class="film-descrption__item">
+        <span class="film-descrption___property">Язык оригинала</span>
+        <span class="film-descrption___value">Русский</span>
+      </li>
+      <li class="film-descrption__item">
+        <span class="film-descrption___property">Язык оригинала</span>
+        <span class="film-descrption___value">Русский</span>
+      </li>
+    </ul>
+  </section>
+</template>
+<script setup lang="ts">
+import AppHero from './AppHero.vue'
+</script>
+
+<style></style>

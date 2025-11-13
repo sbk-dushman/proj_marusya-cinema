@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import AppHero from './AppHero.vue'
-</script>
-
 <template>
   <AppHero />
   <section class="rating-section">
@@ -50,3 +46,6 @@ import AppHero from './AppHero.vue'
     </ul>
   </section>
 </template>
+<script setup lang="ts">
+import AppHero from './AppHero.vue'
+</script>

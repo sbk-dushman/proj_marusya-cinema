@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AppHome from '../views/AppHome.vue'
+import AppFilm from '@/views/AppFilm.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,7 +8,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: AppHome,
+      // component: AppHome,
+      component: AppFilm,
     },
     // {
     //   path: '/about',
