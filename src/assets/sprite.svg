@@ -81,6 +81,11 @@
 <symbol id="star-icon" viewBox="0 0 16 16">
   <path d="M8.00056 12.1733L3.29826 14.8054L4.34848 9.51991L0.39209 5.86118L5.74345 5.22669L8.00056 0.333313L10.2576 5.22669L15.609 5.86118L11.6526 9.51991L12.7028 14.8054L8.00056 12.1733Z" fill="white" />
 </symbol>
+<symbol id="ander" viewBox="0 0 239 1">
+<svg width="239" height="1" viewBox="0 0 239 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M239 0.5H0" stroke="white" stroke-opacity="0.5" stroke-dasharray="2 2" />
+</svg>
+
 
 
 <svg/>
