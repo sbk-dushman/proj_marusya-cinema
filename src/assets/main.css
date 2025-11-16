@@ -11,4 +11,6 @@
   font-size: 40px;
   line-height: 120%;
   color: var(--base-white);
+  padding-bottom: 64px;
+  padding-top: 40px;
 }
