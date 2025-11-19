@@ -1,44 +1,49 @@
 <template>
-  <ul class="film-list">
-    <li class="film-list__item">
-      <span class="film-list__rate">1</span>
-      <a href="#film" class=""></a>
+  <ul class="ganer-list film-list">
+    <li class="film-list__item ganer-list__item">
+      <span style="display: none" class="film-list__rate">1</span>
+      <img class="ganer-list__cover" src="@/assets/Rectangle 1181.jpg" alt="" />
+      <a href="#film" class="ganer-title">Драма</a>
     </li>
     <li class="film-list__item">
-      <span class="film-list__rate">2</span>
-      <a href="#film" class=""></a>
+      <img class="film-list__cover" src="@/assets/top.png" alt="" />
+      <a href="#film" class="film-list__rate">2</a>
+    </li>
+    <!-- <li class="film-list__item">
+      <img class="film-list__cover" src="@/assets/top.png" alt="" />
+      <a href="#film" class="film-list__rate">2</a>
+    </li> -->
+    <li class="film-list__item">
+      <img class="film-list__cover" src="@/assets/top.png" alt="" />
+      <a href="#film" class="film-list__rate">2</a>
     </li>
     <li class="film-list__item">
-      <span class="film-list__rate">3</span>
-      <a href="#film" class=""></a>
+      <img class="film-list__cover" src="@/assets/top.png" alt="" />
+      <a href="#film" class="film-list__rate">2</a>
     </li>
     <li class="film-list__item">
-      <span class="film-list__rate">4</span>
-      <a href="#film" class=""></a>
+      <img class="film-list__cover" src="@/assets/top.png" alt="" />
+      <a href="#film" class="film-list__rate">2</a>
     </li>
     <li class="film-list__item">
-      <span class="film-list__rate">5</span>
-      <a href="#film" class=""></a>
+      <img class="film-list__cover" src="@/assets/top.png" alt="" />
+      <a href="#film" class="film-list__rate">2</a>
     </li>
     <li class="film-list__item">
-      <span class="film-list__rate">6</span>
-      <a href="#film" class=""></a>
+      <img class="film-list__cover" src="@/assets/top.png" alt="" />
+      <a href="#film" class="film-list__rate">2</a>
     </li>
     <li class="film-list__item">
-      <span class="film-list__rate">7</span>
-      <a href="#film" class=""></a>
+      <img class="film-list__cover" src="@/assets/top.png" alt="" />
+      <a href="#film" class="film-list__rate">2</a>
     </li>
     <li class="film-list__item">
-      <span class="film-list__rate">8</span>
-      <a href="#film" class=""></a>
+      <img class="film-list__cover" src="@/assets/top.png" alt="" />
+      <a href="#film" class="film-list__rate">2</a>
     </li>
     <li class="film-list__item">
-      <span class="film-list__rate">9</span>
-      <a href="#film" class=""></a>
-    </li>
-    <li class="film-list__item">
-      <span class="film-list__rate">10</span>
-      <a href="#film" class=""></a>
+      <img class="film-list__cover" src="@/assets/top.png" alt="" />
+      <a href="#film" class="film-list__rate">2</a>
     </li>
   </ul>
 </template>
@@ -50,19 +55,47 @@
 
 
 */
-.film-list {
+.ganer-list {
+}
+.film-list,
+.ganer-list {
   display: flex;
   flex-wrap: wrap;
   max-width: 90%;
   gap: 64px 40px;
 }
 .film-list__item {
-  background-image: url('@/assets/top.png');
   width: 224px;
   height: 336px;
+  display: flex;
+}
+.film-list__cover {
+  width: 100%;
+  height: 100%;
+}
+.film-list__item,
+.ganer-list__item {
   background-size: cover;
   background-position: center;
   position: relative;
+}
+.ganer-list__item {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  width: 290px;
+  height: 304px;
+  box-shadow: 0 0 80px 0 rgba(255, 255, 255, 0.33);
+  background: #0a0b0b;
+  flex-direction: column;
+}
+.ganer-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  text-align: center;
+  color: #fff;
+
+  padding: 22px 0;
 }
 .film-list__rate {
   display: flex;
@@ -72,7 +105,6 @@
   padding: 8px 8px;
   width: 62px;
   height: 48px;
-
   background-color: var(--base-white);
   position: absolute;
   font-family: var(--font-family);
@@ -82,5 +114,12 @@
   color: var(--base-purple);
   top: -14px;
   left: -17px;
+}
+.ganer-list__cover {
+  width: 100%;
+  width: 290px;
+  height: 220px;
+  border-radius: 24px 24px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 </style>
