@@ -116,3 +116,6 @@ body {
     linear-gradient(180deg, rgba(163, 147, 245, 1) 0%, rgba(163, 147, 245, 1) 100%);
   font-size: 15px;
 }
+a {
+  cursor: pointer;
+}

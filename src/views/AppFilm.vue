@@ -35,7 +35,7 @@
   </section>
 </template>
 <script setup lang="ts">
-import AppHero from './AppHero.vue'
+import AppHero from '../components/AppHero.vue'
 </script>
 
 <style>

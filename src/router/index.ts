@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AppHome from '../views/AppHome.vue'
-import AppFilm from '@/views/AppFilm.vue'
+import AppGenres from '@/views/AppGenres.vue'
+import AppGenre from '@/views/AppGenre.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,6 +12,18 @@ const router = createRouter({
       component: AppHome,
       // component: AppFilm,
     },
+    {
+      path: '/genres',
+      name: 'genres',
+      component: AppGenre,
+      // component: AppFilm,
+    },
+    {
+      path: '/genre/:id',
+      name: 'genre',
+      component: AppGenre,
+    },
+
     // {
     //   path: '/about',
     //   name: 'about',

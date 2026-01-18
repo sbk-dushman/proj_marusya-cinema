@@ -4,10 +4,15 @@
       <svg class="header__logo">
         <use xlink:href="@/assets/sprite.svg#logo_w"></use>
       </svg>
+
       <nav class="header__nav">
         <ul class="header-nav__list">
-          <li class="nav-list__item"><a class="nav-list__link --current" href="#">Главная</a></li>
-          <li class="nav-list__item"><a class="nav-list__link" href="#">Жанры</a></li>
+          <li class="nav-list__item">
+            <RouterLink class="nav-list__link" to="/">Главная</RouterLink>
+          </li>
+          <li class="nav-list__item">
+            <RouterLink class="nav-list__link" to="/genres">Жанры</RouterLink>
+          </li>
         </ul>
       </nav>
       <label class="header-search__label" for="header__search">
@@ -48,7 +53,8 @@
   line-height: 133%;
   color: var(--base-white);
 }
-.--current {
+.--current,
+.router-link-active {
   border-bottom: 1.5px solid var(--base-pink-under-line);
 }
 .header__search {

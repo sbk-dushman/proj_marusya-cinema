@@ -1,19 +1,21 @@
 <template>
   <ul class="ganer-list film-list">
-    <li class="film-list__item ganer-list__item">
+    <li v-if="listType == 1 || listType == 2" class="film-list__item ganer-list__item">
       <span style="display: none" class="film-list__rate">1</span>
       <img class="ganer-list__cover" src="@/assets/Rectangle 1181.jpg" alt="" />
-      <a href="#film" class="ganer-title">Драма</a>
+      <RouterLink class="nav-list__link" to="/genre/1">Главная</RouterLink>
+      <a href="#film" class="link ganer-title">Драма</a>
     </li>
-    <li class="film-list__item">
+    <li v-if="listType == 2" class="film-list__item">
+      <span style="" class="film-list__rate">1</span>
       <img class="film-list__cover" src="@/assets/top.png" alt="" />
-      <a href="#film" class="film-list__rate">2</a>
+      <a href="#film " class="link">2</a>
     </li>
     <!-- <li class="film-list__item">
       <img class="film-list__cover" src="@/assets/top.png" alt="" />
       <a href="#film" class="film-list__rate">2</a>
     </li> -->
-    <li class="film-list__item">
+    <!-- <li class="film-list__item">
       <img class="film-list__cover" src="@/assets/top.png" alt="" />
       <a href="#film" class="film-list__rate">2</a>
     </li>
@@ -44,10 +46,20 @@
     <li class="film-list__item">
       <img class="film-list__cover" src="@/assets/top.png" alt="" />
       <a href="#film" class="film-list__rate">2</a>
-    </li>
+    </li> -->
   </ul>
 </template>
-
+<script setup lang="ts">
+import { RouterView } from 'vue-router'
+import AppHeader from './components/AppHeader.vue'
+import AppFooter from './components/AppFooter.vue'
+defineProps({
+  listType: {
+    type: Number,
+    default: 0,
+  },
+})
+</script>
 <style>
 /* TO DO
 1. СДЕЛАТЬ 2 ВЕРСИЮ КАРТОЧЕК
@@ -71,6 +83,12 @@
 }
 .film-list__cover {
   width: 100%;
+  height: 100%;
+}
+.link::after {
+  position: absolute;
+  top: 0;
+  content: '';
   height: 100%;
 }
 .film-list__item,
