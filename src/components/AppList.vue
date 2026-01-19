@@ -1,10 +1,10 @@
 <template>
   <ul class="ganer-list film-list">
-    <li v-if="listType == 1 || listType == 2" class="film-list__item ganer-list__item">
+    <li v-for="value in list" v-if="listType == 1" class="film-list__item ganer-list__item">
       <span style="display: none" class="film-list__rate">1</span>
       <img class="ganer-list__cover" src="@/assets/Rectangle 1181.jpg" alt="" />
       <RouterLink class="nav-list__link" to="/genre/1">Главная</RouterLink>
-      <a href="#film" class="link ganer-title">Драма</a>
+      <a href="#film" class="link ganer-title">{{ value }}</a>
     </li>
     <li v-if="listType == 2" class="film-list__item">
       <span style="" class="film-list__rate">1</span>
@@ -51,22 +51,19 @@
 </template>
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import AppHeader from './components/AppHeader.vue'
-import AppFooter from './components/AppFooter.vue'
+
 defineProps({
   listType: {
     type: Number,
     default: 0,
   },
+  list: {
+    type: Array,
+    default: [],
+  },
 })
 </script>
 <style>
-/* TO DO
-1. СДЕЛАТЬ 2 ВЕРСИЮ КАРТОЧЕК
-2. РАБОЧИЕ ССЫЛКИ  И РОУТЫ НА ФИЛЬМЫ
-
-
-*/
 .ganer-list {
 }
 .film-list,

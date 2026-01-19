@@ -15,7 +15,7 @@ const router = createRouter({
     {
       path: '/genres',
       name: 'genres',
-      component: AppGenre,
+      component: AppGenres,
       // component: AppFilm,
     },
     {
