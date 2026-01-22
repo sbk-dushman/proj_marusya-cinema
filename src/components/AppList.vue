@@ -3,13 +3,13 @@
     <li v-for="value in list" v-if="listType == 1" class="film-list__item ganer-list__item">
       <span style="display: none" class="film-list__rate">1</span>
       <img class="ganer-list__cover" src="@/assets/Rectangle 1181.jpg" alt="" />
-      <RouterLink class="nav-list__link" to="/genre/1">Главная</RouterLink>
-      <a href="#film" class="link ganer-title">{{ value }}</a>
+      <!-- <RouterLink class="nav-list__link" to="/genre/1">Главная</RouterLink> -->
+      <RouterLink :to="`/genre/${value}`" class="link ganer-title">{{ value }}</RouterLink>
     </li>
-    <li v-if="listType == 2" class="film-list__item">
+    <li v-for="value in list" v-if="listType == 2" class="film-list__item">
       <span style="" class="film-list__rate">1</span>
       <img class="film-list__cover" src="@/assets/top.png" alt="" />
-      <a href="#film " class="link">2</a>
+      <a href="#film " class="link">{{ value }}</a>
     </li>
     <!-- <li class="film-list__item">
       <img class="film-list__cover" src="@/assets/top.png" alt="" />
@@ -59,7 +59,7 @@ defineProps({
   },
   list: {
     type: Array,
-    default: [],
+    default: null,
   },
 })
 </script>
