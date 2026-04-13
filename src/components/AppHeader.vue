@@ -22,7 +22,7 @@
         <input class="header__search" type="text" id="header__search" placeholder="поиск" />
       </label>
 
-      <button class="header__profile nav-list__link">Войти</button>
+      <RouterLink class="header__profile nav-list__link" to="/profile">Войти</RouterLink>
     </div>
   </header>
 </template>

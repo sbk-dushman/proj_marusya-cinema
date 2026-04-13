@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AppHome from '../views/AppHome.vue'
+import AppHome from '@/views/AppHome.vue'
 import AppGenres from '@/views/AppGenres.vue'
 import AppGenre from '@/views/AppGenre.vue'
+import AppProfile from '@/views/AppProfile.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,6 +23,11 @@ const router = createRouter({
       path: '/genres/:code',
       name: 'genre',
       component: AppGenre,
+    },
+    {
+      path: '/profile/',
+      name: 'profile',
+      component: AppProfile,
     },
 
     // {
