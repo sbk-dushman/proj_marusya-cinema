@@ -1,15 +1,22 @@
 <template>
   <ul class="ganer-list film-list">
-    <li v-for="value in list" v-if="listType == 1" class="film-list__item ganer-list__item">
+    <li
+      v-for="movie in list"
+      v-if="listType == 1"
+      :key="movie.id"
+      class="film-list__item ganer-list__item"
+    >
       <span style="display: none" class="film-list__rate">1</span>
-      <img class="ganer-list__cover" src="@/assets/Rectangle 1181.jpg" alt="" />
+      <!-- <img class="ganer-list__cover" src="@/assets/Rectangle 1181.jpg" alt="" /> -->
+      <img class="ganer-list__cover" :src="movie.posterUrl" alt="" /> --
       <!-- <RouterLink class="nav-list__link" to="/genre/1">Главная</RouterLink> -->
-      <RouterLink :to="`/genre/${value}`" class="link ganer-title">{{ value }}</RouterLink>
+      <RouterLink :to="`/genre/${movie}`" class="link ganer-title">{{ movie }}</RouterLink>
     </li>
-    <li v-for="value in list" v-if="listType == 2" class="film-list__item">
+    <li v-for="movie in list" v-if="listType == 2" class="film-list__item">
       <span style="" class="film-list__rate">1</span>
-      <img class="film-list__cover" src="@/assets/top.png" alt="" />
-      <a href="#film " class="link">{{ value }}</a>
+      <!-- <img class="film-list__cover" src="@/assets/top.png" alt="" /> -->
+      <img class="film-list__cover" :src="movie.posterUrl" alt="" />
+      <a href="#film " class="link">{{ movie }}</a>
     </li>
     <!-- <li class="film-list__item">
       <img class="film-list__cover" src="@/assets/top.png" alt="" />
@@ -51,6 +58,8 @@
 </template>
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import type { TopMovieList } from '@/types'
+import type { PropType } from 'vue'
 
 defineProps({
   listType: {
@@ -58,8 +67,11 @@ defineProps({
     default: 0,
   },
   list: {
-    type: Array,
+    type: Array as PropType<TopMovieList[]>,
     default: null,
+  },
+  movie: {
+    type: Object as PropType<TopMovieList>,
   },
 })
 </script>

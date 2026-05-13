@@ -5,7 +5,7 @@
       <li class="tabs__favorite">
         <svg><use xlink:href="@/assets/sprite.svg#heart-icon"></use></svg> Избранные фильм
       </li>
-      <li class="account__settings">Настройка аккаунта</li>
+      <li class="tabs__settings">Настройка аккаунта</li>
     </ul>
 
     <!-- favorite -->
@@ -56,7 +56,7 @@
 
     <!-- settings -->
     <ul class="profile">
-      <li>
+      <li class="profile__settings">
         <span>avatar</span>
         <div class="profile-right">
           <span class="profile__subtitle">Имя Фамилия</span>
@@ -64,7 +64,7 @@
         </div>
       </li>
 
-      <li>
+      <li class="">
         <span>avatar</span>
         <div class="profile-right">
           <span class="profile__subtitle">Имя Фамилия</span>
@@ -91,6 +91,10 @@ const ganreStore = useGanresStore()
   color: #fff;
   display: flex;
   gap: 64px;
+}
+.profile__settings {
+  display: flex;
+  vertical-align: middle;
 }
 /* .tabs__favorite::before {
   content: url(../assets/sprite.svg#heart-icon);
