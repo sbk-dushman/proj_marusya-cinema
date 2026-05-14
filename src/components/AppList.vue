@@ -1,23 +1,41 @@
 <template>
   <ul class="ganer-list film-list">
+    <!-- v-if="listType == 1" -->
     <li
+      v-for="movie in list"
+      :key="movie.id"
+      :class="[listType == 1 ? 'ganer-list__item' : '']"
+      class="film-list__item"
+    >
+      <span v-if="listType == 2" class="film-list__rate">1</span>
+      <!-- <img class="ganer-list__cover" src="@/assets/Rectangle 1181.jpg" alt="" /> -->
+      <img
+        :class="[listType == 1 ? 'ganer-list__cover' : '', listType == 2 ? 'film-list__cover' : '']"
+        :src="movie.posterUrl"
+        alt=""
+      />
+
+      <!-- <RouterLink :to="`/genre/${movie}`" class="link ganer-title">{{ movie }}</RouterLink> -->
+    </li>
+    <!-- <li
       v-for="movie in list"
       v-if="listType == 1"
       :key="movie.id"
       class="film-list__item ganer-list__item"
-    >
-      <span style="display: none" class="film-list__rate">1</span>
-      <!-- <img class="ganer-list__cover" src="@/assets/Rectangle 1181.jpg" alt="" /> -->
-      <img class="ganer-list__cover" :src="movie.posterUrl" alt="" /> --
-      <!-- <RouterLink class="nav-list__link" to="/genre/1">Главная</RouterLink> -->
-      <RouterLink :to="`/genre/${movie}`" class="link ganer-title">{{ movie }}</RouterLink>
-    </li>
-    <li v-for="movie in list" v-if="listType == 2" class="film-list__item">
-      <span style="" class="film-list__rate">1</span>
-      <!-- <img class="film-list__cover" src="@/assets/top.png" alt="" /> -->
-      <img class="film-list__cover" :src="movie.posterUrl" alt="" />
-      <a href="#film " class="link">{{ movie }}</a>
-    </li>
+    > -->
+    <!-- <span style="display: none" class="film-list__rate">1</span> -->
+    <!-- <img class="ganer-list__cover" src="@/assets/Rectangle 1181.jpg" alt="" /> -->
+    <!-- <img class="ganer-list__cover" :src="movie.posterUrl" alt="" /> -- -->
+    <!-- <RouterLink class="nav-list__link" to="/genre/1">Главная</RouterLink> -->
+    <!-- <RouterLink :to="`/genre/${movie}`" class="link ganer-title">{{ movie }}</RouterLink> -->
+    <!-- </li> -->
+    <!-- <li v-for="movie in list" v-if="listType == 2" class="film-list__item"> -->
+    <!-- <span style="" class="film-list__rate">1</span> -->
+    <!-- <img class="film-list__cover" src="@/assets/top.png" alt="" /> -->
+    <!-- <img class="film-list__cover" :src="movie.posterUrl" alt="" /> -->
+    <!-- <a href="#film " class="link">{{ movie }}</a> -->
+    <!-- </li> -->
+
     <!-- <li class="film-list__item">
       <img class="film-list__cover" src="@/assets/top.png" alt="" />
       <a href="#film" class="film-list__rate">2</a>
