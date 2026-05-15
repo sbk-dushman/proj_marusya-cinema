@@ -14,6 +14,12 @@
         :src="movie.posterUrl"
         alt=""
       />
+      <RouterLink
+        :to="`/genre/${movie}`"
+        :class="[listType == 1 ? 'ganer-title' : '']"
+        class="link"
+        >{{ movie }}</RouterLink
+      >
 
       <!-- <RouterLink :to="`/genre/${movie}`" class="link ganer-title">{{ movie }}</RouterLink> -->
     </li>
