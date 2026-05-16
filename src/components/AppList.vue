@@ -2,12 +2,12 @@
   <ul class="ganer-list film-list">
     <!-- v-if="listType == 1" -->
     <li
-      v-for="movie in list"
+      v-for="(movie, index) in list"
       :key="movie.id"
       :class="[listType == 1 ? 'ganer-list__item' : '']"
       class="film-list__item"
     >
-      <span v-if="listType == 2" class="film-list__rate">1</span>
+      <span v-if="listType == 2" class="film-list__rate">{{ index == 0 ? 1 : index + 1 }}</span>
       <!-- <img class="ganer-list__cover" src="@/assets/Rectangle 1181.jpg" alt="" /> -->
       <img
         :class="[listType == 1 ? 'ganer-list__cover' : '', listType == 2 ? 'film-list__cover' : '']"
@@ -15,6 +15,7 @@
         alt=""
       />
       <RouterLink
+        v-if="listType == 1"
         :to="`/genre/${movie}`"
         :class="[listType == 1 ? 'ganer-title' : '']"
         class="link"
