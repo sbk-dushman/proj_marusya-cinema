@@ -1,6 +1,7 @@
 <template>
   <!-- settings -->
   <ul data-tabs-target="profile" class="profile">
+    2
     <li class="profile__settings">
       <span>avatar</span>
       <div class="profile-right">

@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AppHome from '@/views/AppHome.vue'
 import AppGenres from '@/views/AppGenres.vue'
 import AppGenre from '@/views/AppGenre.vue'
-import AppProfile from '@/views/AppProfile.vue'
+import AppAccount from '@/views/AppAccount.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,7 +27,7 @@ const router = createRouter({
     {
       path: '/profile/',
       name: 'profile',
-      component: AppProfile,
+      component: AppAccount,
     },
 
     // {

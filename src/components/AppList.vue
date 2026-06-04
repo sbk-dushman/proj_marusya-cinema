@@ -1,5 +1,6 @@
 <template>
   <ul class="ganer-list film-list">
+    1
     <!-- v-if="listType == 1" -->
     <li
       v-for="(movie, index) in list"
