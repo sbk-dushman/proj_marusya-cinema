@@ -3,12 +3,14 @@
     <h2 class="section-title">Мой аккаунт</h2>
 
     <ul class="account-section__tabs tabs">
-      <button @click="changeTab()" class="tabs__favorite" data-tabs-path="favorite">
+      <button @click="changeTab('tab1')" class="tabs__favorite" data-tabs-path="favorite">
         <svg><use xlink:href="@/assets/sprite.svg#heart-icon"></use></svg> Избранные фильм
       </button>
-      <button @click="" class="tabs__settings" data-tabs-path="profile">Настройка аккаунта</button>
+      <button @click="changeTab('tab2')" class="tabs__settings" data-tabs-path="profile">
+        Настройка аккаунта
+      </button>
     </ul>
-    <component :is="tabs[currentTab.name]" class="tab-сontent"></component>
+    <component :is="1" class="tab-сontent"></component>
 
     <button class="button">Выйти из аккаунта</button>
   </section>
@@ -30,7 +32,9 @@ const tabs = {
 const currentTab = defineModel('currentTab', {
   default: { cuerentName: 'AppList', data: useGanresStore().ganreList },
 })
-function changeTab(curentTab) {}
+function changeTab(currentTab) {
+  return currentTab
+}
 // defineProps({
 //   curentTab: {
 //     type: String,
