@@ -83,7 +83,7 @@
   </ul>
 </template>
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+// import { RouterView } from 'vue-router'
 import type { TopMovieList } from '@/types'
 import type { PropType } from 'vue'
 
@@ -102,8 +102,6 @@ defineProps({
 })
 </script>
 <style>
-.ganer-list {
-}
 .film-list,
 .ganer-list {
   display: flex;
