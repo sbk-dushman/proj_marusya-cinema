@@ -54,7 +54,8 @@
   color: var(--base-white);
 }
 .--current,
-.router-link-active {
+.router-link-active,
+.active-tab {
   border-bottom: 1.5px solid var(--base-pink-under-line);
 }
 .header__search {

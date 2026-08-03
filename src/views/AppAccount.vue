@@ -6,16 +6,18 @@
       <button class="tabs__favorite" data-tabs-path="favorite">
         <svg><use xlink:href="@/assets/sprite.svg#heart-icon"></use></svg> Избранные фильм
       </button>
-      <button class="tabs__settings" data-tabs-path="profile">
+      <button class="tabs__settings active-tab" data-tabs-path="profile">
         <svg><use xlink:href="@/assets/sprite.svg#person-icon"></use></svg> Настройка аккаунта
       </button>
     </ul>
-    <component :is="1" class="tab-сontent"></component>
+    <component :is="AppProfile" class="tab-content"></component>
 
     <button class="account-section__button">Выйти из аккаунта</button>
   </section>
 </template>
 <script setup lang="ts">
+import AppProfile from '@/components/AppProfile.vue'
+
 // import { useGanresStore } from '@/stores/ganreStore'
 // import AppList from '../components/AppList.vue'
 // import AppProfile from '../components/AppProfile.vue'
@@ -50,14 +52,11 @@
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 24px;
-  line-height: 133%;
+
+  /* line-height: 133%; */
   color: #fff;
   display: flex;
   gap: 64px;
-}
-.profile__settings {
-  display: flex;
-  vertical-align: middle;
 }
 .account-section__button {
   border-radius: 28px;
@@ -65,6 +64,20 @@
   width: 262px;
   height: 56px;
   background: #67a5eb;
+  backdrop-filter: blur(20px);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  /* line-height: 133%; */
+  color: var(--base-white);
+}
+.tabs__settings,
+.account-section__tabs {
+  /* padding-bottom: 4px; */
+}
+.tab-content {
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 /* .tabs__favorite::before {
   content: url(../assets/sprite.svg#heart-icon);
