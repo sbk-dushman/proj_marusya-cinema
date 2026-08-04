@@ -9,8 +9,12 @@
       </div>
     </li>
 
-    <li class="">
-      <span class="avatar">avatar</span>
+    <li class="profile__settings">
+      <span class="avatar">
+        <svg>
+          <use xlink:href="@/assets/sprite.svg#swoosh-email-icon"></use>
+        </svg>
+      </span>
       <div class="profile-right">
         <span class="profile__subtitle">Электронная почта</span>
         <h3 class="profile__ttitle">example@domain.com</h3>
@@ -24,7 +28,8 @@
   border-radius: 30px;
   width: 60px;
   height: 60px;
-  background: #ffffff80;
+
+  background: var(--soft-grey);
   text-transform: uppercase;
   /* text-align: center;
   vertical-align: middle; */
@@ -46,6 +51,19 @@
   gap: 40px;
   display: flex;
   flex-direction: column;
+}
+.profile__subtitle {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--base-white);
+}
+.profile__ttitle {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  margin-top: 4px;
 }
 </style>
 <script setup lang="ts"></script>
