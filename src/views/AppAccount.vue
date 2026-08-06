@@ -6,7 +6,12 @@
       <button class="tabs__favorite" data-tabs-path="favorite" @click="currentTab = tabs.favorite">
         <svg><use xlink:href="@/assets/sprite.svg#heart-icon"></use></svg> Избранные фильм
       </button>
-      <button class="tabs__settings active-tab" data-tabs-path="profile" @click="currentTab = tabs.profile">
+      <button
+        :class="{ 'active-tab': activeTab == 'AppList' }"
+        class="tabs__settings"
+        data-tabs-path="profile"
+        @click="currentTab = tabs.profile"
+      >
         <svg><use xlink:href="@/assets/sprite.svg#person-icon"></use></svg> Настройка аккаунта
       </button>
     </ul>
@@ -16,13 +21,11 @@
   </section>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import AppProfile from '@/components/AppProfile.vue'
 import AppList from '../components/AppList.vue'
-
-const topMoveieStore = {
-  getTopMoveie: [],
-}
+import { useTopMoveStore } from '@/stores/topMoveStore'
+const topMoveieStore = useTopMoveStore()
 
 const tabs = {
   favorite: {
@@ -39,6 +42,9 @@ const tabs = {
 }
 
 const currentTab = ref(tabs.profile)
+const activeTab = computed(() => {
+  return currentTab.value.component.__name
+})
 </script>
 <style>
 .account-section__tabs {
