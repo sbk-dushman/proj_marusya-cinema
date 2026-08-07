@@ -66,4 +66,8 @@
   margin-top: 4px;
 }
 </style>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineOptions({
+  name: 'app-profile',
+})
+</script>

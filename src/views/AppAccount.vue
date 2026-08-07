@@ -3,11 +3,16 @@
     <h2 class="section-title">Мой аккаунт</h2>
 
     <ul class="account-section__tabs tabs">
-      <button class="tabs__favorite" data-tabs-path="favorite" @click="currentTab = tabs.favorite">
+      <button
+        :class="{ 'active-tab': activeTab == 'app-list' }"
+        class="tabs__favorite"
+        data-tabs-path="favorite"
+        @click="currentTab = tabs.favorite"
+      >
         <svg><use xlink:href="@/assets/sprite.svg#heart-icon"></use></svg> Избранные фильм
       </button>
       <button
-        :class="{ 'active-tab': activeTab == 'AppList' }"
+        :class="{ 'active-tab': activeTab == 'app-profile' }"
         class="tabs__settings"
         data-tabs-path="profile"
         @click="currentTab = tabs.profile"
@@ -40,10 +45,10 @@ const tabs = {
     props: {},
   },
 }
-
 const currentTab = ref(tabs.profile)
+
 const activeTab = computed(() => {
-  return currentTab.value.component.__name
+  return currentTab.value.component.name
 })
 </script>
 <style>

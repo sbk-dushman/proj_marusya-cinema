@@ -86,7 +86,9 @@
 // import { RouterView } from 'vue-router'
 import type { TopMovieList } from '@/types'
 import type { PropType } from 'vue'
-
+defineOptions({
+  name: 'app-list',
+})
 defineProps({
   listType: {
     type: Number,
