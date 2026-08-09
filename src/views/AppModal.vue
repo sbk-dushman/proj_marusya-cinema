@@ -62,4 +62,14 @@
 // import { useTopMoveStore } from '@/stores/topMoveStore'
 // const topMoveieStore = useTopMoveStore()
 </script>
-<style></style>
+<style>
+.modal-container {
+  /* background: #00000080; */
+  background: #ff0808;
+  z-index: 9;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+</style>
