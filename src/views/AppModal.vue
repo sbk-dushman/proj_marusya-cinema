@@ -2,13 +2,27 @@
   <div class="modal-container">
     <form class="login-form form" action="#">
       <button class="form__close">x</button>
-      <div class="login-form form">лого</div>
-      <h1 class="form__title">Регистрация завершена</h1>
+      <span class="form-logo">
+        <svg class="header__logo">
+          <use xlink:href="@/assets/sprite.svg#logo-dark"></use>
+        </svg>
+      </span>
+      <h2 class="form-title">Регистрация</h2>
       <p>Используйте вашу электронную почту для входа</p>
-      <label for="form__first-name">
-        icon
+      <label class="" for="form__email">
+        <svg class="input-icon">
+          <use xlink:href="@/assets/sprite.svg#person-icon"></use>
+        </svg>
         <input
-          class="form__first-name form_base"
+          class="form__email form_input"
+          type="email"
+          placeholder="Электронная почта"
+          id="form__email"
+        />
+      </label>
+      <label class="" for="form__first-name">
+        <input
+          class="form__first-name form_input"
           type="text"
           placeholder="Имя"
           id="form__first-name"
@@ -18,25 +32,17 @@
       <label for="form__last-name">
         icon
         <input
-          class="form__last-name form_base"
+          class="form__last-name form_input"
           type="text"
           placeholder="Фамилия"
           id="form__last-name"
         />
       </label>
-      <label for="form__email">
-        icon
-        <input
-          class="form__email form_base"
-          type="email"
-          placeholder="Электронная почта"
-          id="form__email"
-        />
-      </label>
+
       <label for="form__password">
         icon
         <input
-          class="form__password form_base"
+          class="form__password form_input"
           type="password"
           placeholder="Пароль"
           id="form__password"
@@ -45,7 +51,7 @@
       <label for="form__password-confirm">
         icon
         <input
-          class="form__password-confirm form_base"
+          class="form__password-confirm form_input"
           type="password"
           placeholder="Подтвердите пароль"
           id="form__password-confirm"
@@ -64,12 +70,53 @@
 </script>
 <style>
 .modal-container {
-  /* background: #00000080; */
-  background: #ff0808;
+  background: #00000080;
+  /* background: #ff0808; */
   z-index: 9;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.form {
+  background-color: var(--base-white);
+  border-radius: 24px;
+  padding: 64px 40px;
+  max-width: 420px;
+  max-height: 709px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.form_input {
+  border: 1px solid #00000066;
+  border-radius: 8px;
+  padding: 16px;
+  width: 340px;
+  height: 56px;
+  position: relative;
+  padding-left: 52px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.input-icon {
+  position: absolute;
+  fill: #00000066;
+  color: none;
+  z-index: 10;
+  top: 16px;
+  left: 16px;
+}
+.form-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: #000;
 }
 </style>

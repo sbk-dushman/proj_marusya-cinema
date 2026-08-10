@@ -102,12 +102,17 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
+input {
+  outline: none;
+}
 svg {
   width: 24px;
   height: 24px;
   vertical-align: middle;
 }
-body {
+body,
+html {
+  overflow: hidden;
   min-height: 100vh;
   color: var(--base-white);
   background-color: rgb(106, 93, 194);
