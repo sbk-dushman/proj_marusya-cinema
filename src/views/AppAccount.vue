@@ -79,7 +79,7 @@ const activeTab = computed(() => {
 }
 .tabs__settings,
 .account-section__tabs {
-  /* padding-bottom: 4px; */
+  fill: var(--base-white);
 }
 .tab-content {
   padding-top: 64px;

@@ -28,7 +28,7 @@
   border-radius: 30px;
   width: 60px;
   height: 60px;
-
+  fill: var(--base-white);
   background: var(--soft-grey);
   text-transform: uppercase;
   /* text-align: center;

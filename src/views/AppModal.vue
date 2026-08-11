@@ -1,7 +1,11 @@
 <template>
   <div class="modal-container">
     <form class="login-form form" action="#">
-      <button class="form__close">x</button>
+      <button class="form__close">
+        <svg class="close-icon">
+          <use xlink:href="@/assets/sprite.svg#close-icon"></use>
+        </svg>
+      </button>
       <span class="form-logo">
         <svg class="header__logo">
           <use xlink:href="@/assets/sprite.svg#logo-dark"></use>
@@ -9,9 +13,9 @@
       </span>
       <h2 class="form-title">Регистрация</h2>
       <p>Используйте вашу электронную почту для входа</p>
-      <label class="" for="form__email">
+      <label class="input-icon-container" for="form__email">
         <svg class="input-icon">
-          <use xlink:href="@/assets/sprite.svg#person-icon"></use>
+          <use xlink:href="@/assets/sprite.svg#swoosh-email-icon"></use>
         </svg>
         <input
           class="form__email form_input"
@@ -20,7 +24,10 @@
           id="form__email"
         />
       </label>
-      <label class="" for="form__first-name">
+      <label class="input-icon-container" for="form__first-name">
+        <svg class="input-icon">
+          <use xlink:href="@/assets/sprite.svg#person-icon"></use>
+        </svg>
         <input
           class="form__first-name form_input"
           type="text"
@@ -29,8 +36,10 @@
         />
       </label>
 
-      <label for="form__last-name">
-        icon
+      <label class="input-icon-container" for="form__last-name">
+        <svg class="input-icon">
+          <use xlink:href="@/assets/sprite.svg#person-icon"></use>
+        </svg>
         <input
           class="form__last-name form_input"
           type="text"
@@ -39,8 +48,10 @@
         />
       </label>
 
-      <label for="form__password">
-        icon
+      <label class="input-icon-container" for="form__password">
+        <svg class="input-icon">
+          <use xlink:href="@/assets/sprite.svg#key-icon"></use>
+        </svg>
         <input
           class="form__password form_input"
           type="password"
@@ -48,8 +59,10 @@
           id="form__password"
         />
       </label>
-      <label for="form__password-confirm">
-        icon
+      <label class="input-icon-container" for="form__password-confirm">
+        <svg class="input-icon">
+          <use xlink:href="@/assets/sprite.svg#key-icon"></use>
+        </svg>
         <input
           class="form__password-confirm form_input"
           type="password"
@@ -93,6 +106,7 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  position: relative;
 }
 .form_input {
   border: 1px solid #00000066;
@@ -112,11 +126,26 @@
   top: 16px;
   left: 16px;
 }
+.input-icon-container {
+  position: relative;
+}
 .form-title {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 24px;
   line-height: 133%;
   color: #000;
+}
+.form__close {
+  border-radius: 24px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--base-white);
+  position: absolute;
+  right: -64px;
+  top: 0;
+}
+.close-icon {
+  fill: var(--base-black);
 }
 </style>

@@ -112,13 +112,13 @@ svg {
 }
 body,
 html {
-  overflow: hidden;
+  /* overflow: hidden; */
   min-height: 100vh;
   color: var(--base-white);
   background-color: rgb(106, 93, 194);
   background:
     linear-gradient(180deg, #000 0%, rgba(39, 36, 36, 0.7) 100%),
-    linear-gradient(180deg, rgba(163, 147, 245, 1) 0%, rgba(163, 147, 245, 1) 100%);
+    linear-gradient(180deg, rgb(209, 208, 210) 0%, rgba(163, 147, 245, 1) 100%);
   font-size: 15px;
 }
 a {
