@@ -21,6 +21,7 @@
       </div>
     </li>
   </ul>
+  <button class="account-section__button">Выйти из аккаунта</button>
 </template>
 <style>
 .avatar {
@@ -64,6 +65,9 @@
   font-size: 24px;
   color: #fff;
   margin-top: 4px;
+}
+.account-section__button {
+  margin-top: 64px;
 }
 </style>
 <script setup lang="ts">

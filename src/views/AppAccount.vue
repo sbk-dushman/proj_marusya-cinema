@@ -21,8 +21,6 @@
       </button>
     </ul>
     <component :is="currentTab.component" class="tab-content" v-bind="currentTab.props"></component>
-
-    <button class="account-section__button">Выйти из аккаунта</button>
   </section>
 </template>
 <script setup lang="ts">

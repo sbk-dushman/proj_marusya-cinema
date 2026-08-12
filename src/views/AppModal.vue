@@ -145,6 +145,26 @@
   right: -64px;
   top: 0;
 }
+.form__btn {
+  border-radius: 28px;
+  padding: 16px 48px;
+  width: 340px;
+  height: 56px;
+  background: #67a5eb;
+  color: var(--base-white);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 34px;
+  margin-bottom: 24px;
+}
+.form__sub-link {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--base-black);
+}
 .close-icon {
   fill: var(--base-black);
 }
