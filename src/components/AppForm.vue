@@ -97,7 +97,7 @@ defineProps({
     default: 0,
   },
   filds: {
-    type: Array as PropType<FormsType>,
+    type: Array as PropType<FormsType[]>,
     default: [
       {
         id: 1,
