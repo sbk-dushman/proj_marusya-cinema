@@ -26,10 +26,9 @@ export type TopMovieList = {
   production: null
   awardsSummary: null
 }
-// export type FormsType = {
-//   formType: number,
-//   filds:[]
-//   f
-//   class:string|null,
-
-// }
+export type FormsType = {
+  id: number
+  fildPaceholder: string
+  svgCode: string
+  class: string
+}

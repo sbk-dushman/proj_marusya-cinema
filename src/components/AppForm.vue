@@ -12,7 +12,18 @@
     </span>
     <h2 class="form-title">Регистрация</h2>
     <p>Используйте вашу электронную почту для входа</p>
-    <label class="input-icon-container" for="form__email">
+    <label v-for="(fild, id) in filds" :key="id" class="input-icon-container" for="form__email">
+      <svg class="input-icon">
+        <use :xlink:href="`@/assets/sprite.svg#${fild.svgCode}`"></use>
+      </svg>
+      <input
+        class="form__email form_input"
+        type="email"
+        placeholder="Электронная почта"
+        id="form__email"
+      />
+    </label>
+    <!-- <label class="input-icon-container" for="form__email">
       <svg class="input-icon">
         <use xlink:href="@/assets/sprite.svg#swoosh-email-icon"></use>
       </svg>
@@ -68,7 +79,7 @@
         placeholder="Подтвердите пароль"
         id="form__password-confirm"
       />
-    </label>
+    </label> -->
     <button class="form__btn" type="submit">Войти</button>
     <a class="form__sub-link" href="#/reg">Регистрация</a>
   </form>
@@ -78,13 +89,15 @@
 // import AppHero from '../components/AppHero.vue'
 // import { useTopMoveStore } from '@/stores/topMoveStore'
 // const topMoveieStore = useTopMoveStore()
+import type { FormsType } from '@/types'
+import type { PropType } from 'vue'
 defineProps({
   form: {
     type: Number,
     default: 0,
   },
   filds: {
-    type: Array<object>,
+    type: Array as PropType<FormsType>,
     default: [
       {
         id: 1,
