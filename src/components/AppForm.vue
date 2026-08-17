@@ -11,16 +11,17 @@
       </svg>
     </span>
     <h2 class="form-title">Регистрация</h2>
-    <p>Используйте вашу электронную почту для входа</p>
+    <!-- <p>Используйте вашу электронную почту для входа</p> -->
     <label v-for="(fild, id) in filds" :key="id" class="input-icon-container" for="form__email">
       <svg class="input-icon">
-        <use :xlink:href="`@/assets/sprite.svg#${fild.svgCode}`"></use>
+        <use :xlink:href="`/src/assets/sprite.svg#${fild.svgCode}`"></use>
       </svg>
       <input
-        class="form__email form_input"
-        type="email"
-        placeholder="Электронная почта"
-        id="form__email"
+        :class="fild.class"
+        class="form_input"
+        :type="fild.inputType"
+        :placeholder="fild.fildPaceholder"
+        :id="fild.inputId"
       />
     </label>
     <!-- <label class="input-icon-container" for="form__email">
@@ -33,8 +34,8 @@
         placeholder="Электронная почта"
         id="form__email"
       />
-    </label>
-    <label class="input-icon-container" for="form__first-name">
+    </label> -->
+    <!-- <label class="input-icon-container" for="form__first-name">
       <svg class="input-icon">
         <use xlink:href="@/assets/sprite.svg#person-icon"></use>
       </svg>
@@ -97,19 +98,22 @@ defineProps({
     default: 0,
   },
   filds: {
-    type: Array as PropType<FormsType[]>,
+    type: Array as PropType<FormsType>,
     default: [
       {
         id: 1,
+        inputId: 'form__email',
         fildPaceholder: 'Электронная почта',
         svgCode: 'swoosh-email-icon',
-        class: '',
+        class: 'form__email',
+        inputType: 'email',
       },
       {
-        fildName: 2,
-        fildPaceholder: 'Пароль',
-        svgCode: 'key-icon',
-        class: '',
+        inputId: 'form__email',
+        fildPaceholder: 'Электронная почта',
+        svgCode: 'swoosh-email-icon',
+        class: 'form__email',
+        inputType: 'email',
       },
     ],
   },

@@ -29,8 +29,10 @@ export type TopMovieList = {
 export type FormsType = [
   {
     id: number
+    inputId: string
     fildPaceholder: string
     svgCode: string
     class: string
+    inputType: string
   },
 ]
