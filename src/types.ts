@@ -26,13 +26,12 @@ export type TopMovieList = {
   production: null
   awardsSummary: null
 }
-export type FormsType = [
-  {
-    id: number
-    inputId: string
-    fildPaceholder: string
-    svgCode: string
-    class: string
-    inputType: string
-  },
-]
+export interface FormField {
+  id: number
+  inputId: string
+  fildPaceholder: string
+  svgCode: string
+  class: string
+  inputType: string
+}
+export type FormsType = FormField[]

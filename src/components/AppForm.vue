@@ -1,6 +1,6 @@
 <template>
   <form class="login-form form" action="#">
-    <button class="form__close">
+    <button class="form__close" @click="$emit('someEvent')">
       <svg class="close-icon">
         <use xlink:href="@/assets/sprite.svg#close-icon"></use>
       </svg>
@@ -99,7 +99,7 @@ defineProps({
   },
   filds: {
     type: Array as PropType<FormsType>,
-    default: [
+    default: () => [
       {
         id: 1,
         inputId: 'form__email',
