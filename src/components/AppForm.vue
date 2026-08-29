@@ -1,6 +1,6 @@
 <template>
   <form class="login-form form" action="#">
-    <button class="form__close" @click="$emit('someEvent')">
+    <button class="form__close" @click.prevent="$emit('someEvent')">
       <svg class="close-icon">
         <use xlink:href="@/assets/sprite.svg#close-icon"></use>
       </svg>

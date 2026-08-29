@@ -1,6 +1,6 @@
 <template>
   <div class="modal-container">
-    <button class="form__close">
+    <button @click.prevent="action" class="form__close">
       <svg class="close-icon">
         <use xlink:href="@/assets/sprite.svg#close-icon"></use>
       </svg>
@@ -9,10 +9,15 @@
   </div>
 </template>
 <script setup lang="ts">
+const emit = defineEmits(['close-modal'])
 import AppForm from '../components/AppForm.vue'
 // import AppHero from '../components/AppHero.vue'
 // import { useTopMoveStore } from '@/stores/topMoveStore'
 // const topMoveieStore = useTopMoveStore()
+function action() {
+  alert(1)
+  // emit('close-modal')
+}
 </script>
 <style>
 .modal-container {

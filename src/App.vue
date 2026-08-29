@@ -3,7 +3,7 @@
 
   <AppHeader />
   <main>
-    <RouterView />
+    <RouterView @close-modal="formClose" />
   </main>
   <AppFooter />
 </template>
@@ -13,8 +13,10 @@ import AppHeader from './components/AppHeader.vue'
 import AppFooter from './views/AppFooter.vue'
 import AppModal from '@/views/AppModal.vue'
 const modalOpen = defineModel({ default: false })
-const emit = defineEmits(['close-modal-action'])
 
+function formClose() {
+  alert('2mox')
+}
 defineProps({
   // modalOpen: {
   //   type: Boolean,
